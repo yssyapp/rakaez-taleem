@@ -20,6 +20,9 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Use placeholder Firebase config for CI (real keys stay private)
+        run: cp lib/firebase_options.example.dart lib/firebase_options.dart
+
       - name: Install dependencies
         run: flutter pub get
 
